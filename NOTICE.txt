@@ -1,0 +1,2 @@
+The Lely core libraries, including the Lely CANopen stack, are distributed under the terms of the Apache License, Version 2.0.
+The "master.dcf.em" file is derived from the Lely CANopen stack and modified to generate TIME service.

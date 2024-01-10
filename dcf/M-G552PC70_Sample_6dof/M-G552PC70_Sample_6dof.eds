@@ -1,0 +1,1133 @@
+[FileInfo]
+CreatedBy=SEC
+ModifiedBy=SEC
+Description=Slave IMU
+CreationTime=11:28AM
+CreationDate=06-24-2021
+ModificationTime=11:28AM
+ModificationDate=06-24-2021
+FileName=M-G552PC70_Sample_6dof.eds
+FileVersion=1
+FileRevision=1
+EDSVersion=4.0
+
+[DeviceInfo]
+VendorName=Epson
+VendorNumber=0
+ProductName=M-G552PC70
+ProductNumber=0x32353547
+RevisionNumber=1
+BaudRate_10=1
+BaudRate_20=1
+BaudRate_50=1
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=1
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=8
+DynamicChannelsSupported=0
+CompactPDO=0
+GroupMessaging=0
+NrOfRXPDO=0
+NrOfTXPDO=4
+LSS_Supported=0
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=1
+Dummy0003=1
+Dummy0004=1
+Dummy0005=1
+Dummy0006=1
+Dummy0007=1
+
+[Comments]
+Lines=0
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20194
+PDOMapping=0
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0
+PDOMapping=1
+
+[1018]
+ParameterName=Identity
+ObjectType=0x9
+SubNumber=2
+
+[1018sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1018sub1]
+ParameterName=Vendor ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[OptionalObjects]
+SupportedObjects=26
+1=0x1002
+2=0x1005
+3=0x1006
+4=0x1008
+5=0x1009
+6=0x100A
+7=0x1010
+8=0x1011
+9=0x1012
+10=0x1017
+11=0x1019
+12=0x1200
+13=0x1800
+14=0x1801
+15=0x1802
+16=0x1803
+17=0x1A00
+18=0x1A01
+19=0x1A02
+20=0x1A03
+21=0x1F80
+22=0x6110
+23=0x6131
+24=0x61A0
+25=0x61A1
+26=0x7130
+
+[1002]
+ParameterName=Manufacturer Status Register
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=1
+
+[1005]
+ParameterName=SYNC COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=128
+PDOMapping=0
+
+[1006]
+ParameterName=Communication Cycle Period
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=10000
+PDOMapping=0
+ObjFlags=0x0
+
+[1008]
+ParameterName=Manufacturer Device Name
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=G552
+PDOMapping=0
+
+[1009]
+ParameterName=Manufacturer Hardware Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=PC70
+PDOMapping=0
+
+[100A]
+ParameterName=Manufacturer Software Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=1.00
+PDOMapping=0
+
+[1010]
+ParameterName=Store parameters
+ObjectType=0x8
+SubNumber=2
+
+[1010sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1010sub1]
+ParameterName=Save All Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x1
+PDOMapping=0
+
+[1011]
+ParameterName=Restore Default Parameters
+ObjectType=0x8
+SubNumber=2
+
+[1011sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1011sub1]
+ParameterName=Restore All Default Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x1
+PDOMapping=0
+
+[1012]
+ParameterName=TIME COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=2147483904
+PDOMapping=0
+
+[1017]
+ParameterName=Producer Heartbeat Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1019]
+ParameterName=Synchronous counter overflow value
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+
+[1200]
+ParameterName=Server SDO Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1200sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[1200sub1]
+ParameterName=COB ID Client to Server (Receive SDO)
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x600
+PDOMapping=0
+
+[1200sub2]
+ParameterName=COB ID Server to Client (Transmit SDO)
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x580
+PDOMapping=0
+
+[1800]
+ParameterName=Transmit PDO 1 Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1800sub0]
+ParameterName=Highest SubIndex Supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[1800sub1]
+ParameterName=COB ID used by PDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000180
+PDOMapping=0
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+
+[1801]
+ParameterName=Transmit PDO 2 Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1801sub0]
+ParameterName=Highest SubIndex Supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[1801sub1]
+ParameterName=COB ID used by PDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000280
+PDOMapping=0
+
+[1801sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1802]
+ParameterName=Transmit PDO 3 Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1802sub0]
+ParameterName=Highest SubIndex Supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[1802sub1]
+ParameterName=COB ID used by PDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000380
+PDOMapping=0
+
+[1802sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1803]
+ParameterName=Transmit PDO 4 Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1803sub0]
+ParameterName=Highest SubIndex Supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[1803sub1]
+ParameterName=COB ID used by PDO
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x40000480
+PDOMapping=0
+
+[1803sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=254
+PDOMapping=0
+
+[1A00]
+ParameterName=Transmit PDO 1 Mapping
+ObjectType=0x9
+SubNumber=5
+
+[1A00sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[1A00sub1]
+ParameterName=PDO 1 Mapping for a process data variable 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x21000010
+PDOMapping=0
+
+[1A00sub2]
+ParameterName=PDO 1 Mapping for a process data variable 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300110
+PDOMapping=0
+
+[1A00sub3]
+ParameterName=PDO 1 Mapping for a process data variable 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300210
+PDOMapping=0
+
+[1A00sub4]
+ParameterName=PDO 1 Mapping for a process data variable 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300310
+PDOMapping=0
+
+[1A01]
+ParameterName=Transmit PDO 2 Mapping
+ObjectType=0x9
+SubNumber=5
+
+[1A01sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[1A01sub1]
+ParameterName=PDO 2 Mapping for a process data variable 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x21000010
+PDOMapping=0
+
+[1A01sub2]
+ParameterName=PDO 2 Mapping for a process data variable 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300410
+PDOMapping=0
+
+[1A01sub3]
+ParameterName=PDO 2 Mapping for a process data variable 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300510
+PDOMapping=0
+
+[1A01sub4]
+ParameterName=PDO 2 Mapping for a process data variable 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300610
+PDOMapping=0
+
+[1A02]
+ParameterName=Transmit PDO 3 Mapping
+ObjectType=0x9
+SubNumber=5
+
+[1A02sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[1A02sub1]
+ParameterName=PDO 3 Mapping for a process data variable 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x21000010
+PDOMapping=0
+
+[1A02sub2]
+ParameterName=PDO 3 Mapping for a process data variable 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x71300710
+PDOMapping=0
+
+[1A02sub3]
+ParameterName=PDO 3 Mapping for a process data variable 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20220410
+PDOMapping=0
+
+[1A02sub4]
+ParameterName=PDO 3 Mapping for a process data variable 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20220110
+PDOMapping=0
+
+[1A03]
+ParameterName=Transmit PDO 4 Mapping
+ObjectType=0x9
+SubNumber=4
+
+[1A03sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[1A03sub1]
+ParameterName=PDO 4 Mapping for a process data variable 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x21000010
+PDOMapping=0
+
+[1A03sub2]
+ParameterName=PDO 4 Mapping for a process data variable 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x21010220
+PDOMapping=0
+
+[1A03sub3]
+ParameterName=PDO 4 Mapping for a process data variable 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x21010110
+PDOMapping=0
+
+[1F80]
+ParameterName=NMT Startup
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=8
+PDOMapping=0
+
+[6110]
+ParameterName=AI Sensor Type
+ObjectType=0x8
+SubNumber=11
+
+[6110sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=10
+PDOMapping=0
+
+[6110sub1]
+ParameterName=AI Sensor Type 1
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10401
+PDOMapping=0
+
+[6110sub2]
+ParameterName=AI Sensor Type 2
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10401
+PDOMapping=0
+
+[6110sub3]
+ParameterName=AI Sensor Type 3
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10401
+PDOMapping=0
+
+[6110sub4]
+ParameterName=AI Sensor Type 4
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10501
+PDOMapping=0
+
+[6110sub5]
+ParameterName=AI Sensor Type 5
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10501
+PDOMapping=0
+
+[6110sub6]
+ParameterName=AI Sensor Type 6
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10501
+PDOMapping=0
+
+[6110sub7]
+ParameterName=AI Sensor Type 7
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=100
+PDOMapping=0
+
+[6110sub8]
+ParameterName=AI Sensor Type 8
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=10401
+PDOMapping=0
+
+[6110sub9]
+ParameterName=AI Sensor Type 9
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x28A1
+PDOMapping=0
+
+[6110subA]
+ParameterName=AI Sensor Type 10
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x28A1
+PDOMapping=0
+
+[6131]
+ParameterName=AI Physical Unit PV
+ObjectType=0x8
+SubNumber=11
+
+[6131sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=10
+PDOMapping=0
+
+[6131sub1]
+ParameterName=AI Physical Unit PV 1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=4260608
+PDOMapping=0
+
+[6131sub2]
+ParameterName=AI Physical Unit PV 2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=4260608
+PDOMapping=0
+
+[6131sub3]
+ParameterName=AI Physical Unit PV 3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=4260608
+PDOMapping=0
+
+[6131sub4]
+ParameterName=AI Physical Unit PV 4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=4260429824
+PDOMapping=0
+
+[6131sub5]
+ParameterName=AI Physical Unit PV 5
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=4260429824
+PDOMapping=0
+
+[6131sub6]
+ParameterName=AI Physical Unit PV 6
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=4260429824
+PDOMapping=0
+
+[6131sub7]
+ParameterName=AI Physical Unit PV 7
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=2949120
+PDOMapping=0
+
+[6131sub8]
+ParameterName=AI Physical Unit PV 8
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[6131sub9]
+ParameterName=AI Physical Unit PV 9
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[6131subA]
+ParameterName=AI Physical Unit PV 10
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+
+[61A0]
+ParameterName=AI Filter Type
+ObjectType=0x8
+SubNumber=11
+
+[61A0sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=10
+PDOMapping=0
+
+[61A0sub1]
+ParameterName=AI Filter Type 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub2]
+ParameterName=AI Filter Type 2
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub3]
+ParameterName=AI Filter Type 3
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub4]
+ParameterName=AI Filter Type 4
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub5]
+ParameterName=AI Filter Type 5
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub6]
+ParameterName=AI Filter Type 6
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub7]
+ParameterName=AI Filter Type 7
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub8]
+ParameterName=AI Filter Type 8
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0sub9]
+ParameterName=AI Filter Type 9
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A0subA]
+ParameterName=AI Filter Type 10
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[61A1]
+ParameterName=AI Filter Constant
+ObjectType=0x8
+SubNumber=11
+
+[61A1sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=10
+PDOMapping=0
+
+[61A1sub1]
+ParameterName=AI Filter Constant 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub2]
+ParameterName=AI Filter Constant 2
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub3]
+ParameterName=AI Filter Constant 3
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub4]
+ParameterName=AI Filter Constant 4
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub5]
+ParameterName=AI Filter Constant 5
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub6]
+ParameterName=AI Filter Constant 6
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub7]
+ParameterName=AI Filter Constant 7
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub8]
+ParameterName=AI Filter Constant 8
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1sub9]
+ParameterName=AI Filter Constant 9
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[61A1subA]
+ParameterName=AI Filter Constant 10
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=9
+PDOMapping=0
+
+[7130]
+ParameterName=AI Input PV
+ObjectType=0x8
+SubNumber=11
+
+[7130sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=10
+PDOMapping=0
+
+[7130sub1]
+ParameterName=AI Input PV 1
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub2]
+ParameterName=AI Input PV 2
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub3]
+ParameterName=AI Input PV 3
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub4]
+ParameterName=AI Input PV 4
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub5]
+ParameterName=AI Input PV 5
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub6]
+ParameterName=AI Input PV 6
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub7]
+ParameterName=AI Input PV 7
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub8]
+ParameterName=AI Input PV 8
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130sub9]
+ParameterName=AI Input PV 9
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[7130subA]
+ParameterName=AI Input PV 10
+ObjectType=0x7
+DataType=0x0003
+AccessType=ro
+PDOMapping=1
+
+[ManufacturerObjects]
+SupportedObjects=6
+1=0x2000
+2=0x2001
+3=0x2005
+4=0x2022
+5=0x2100
+6=0x2101
+
+[2000]
+ParameterName=CAN Parameters
+ObjectType=0x9
+SubNumber=3
+
+[2000sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[2000sub1]
+ParameterName=Node ID
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=1
+PDOMapping=1
+
+[2000sub2]
+ParameterName=Bitrate
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=3
+PDOMapping=1
+
+[2001]
+ParameterName=Sensor Sample Rate
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=10
+PDOMapping=1
+
+[2005]
+ParameterName=Apply parameters
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x10
+PDOMapping=1
+
+[2022]
+ParameterName=Sensor status
+ObjectType=0x9
+SubNumber=3
+
+[2022sub0]
+ParameterName=NrOfObjects
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+
+[2022sub1]
+ParameterName=Sensor Range Over Status
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=1
+
+[2022sub4]
+ParameterName=Sensor RT Diag Status
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0
+PDOMapping=1
+
+[2100]
+ParameterName=Trigger Counter
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=1
+
+[2101]
+ParameterName=Timestamp Parameters
+ObjectType=0x9
+SubNumber=3
+
+[2101sub0]
+ParameterName=Number of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+
+[2101sub1]
+ParameterName=Day
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=1
+
+[2101sub2]
+ParameterName=Millisecond
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=1
